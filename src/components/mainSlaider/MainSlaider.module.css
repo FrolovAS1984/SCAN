@@ -1,0 +1,50 @@
+@import "../../styles/variables.css";
+
+.slaider {
+    height: 349px;
+
+}
+
+
+
+.info {
+    width: 743px;
+    height: 54px;
+    font-family: Ferry, sans-serif;
+    font-size: 45px;
+    font-weight: 900;
+    line-height: 54px;
+    text-align: left;
+    text-transform: uppercase;
+    margin-left: 60px;
+    margin-top: 135px;
+}
+
+.container {
+    display: flex;
+    margin-left: 51px;
+    margin-top: 70px;
+
+
+}
+
+.iconleft {
+
+
+}
+
+.iconright {
+    transform: rotate(180deg);
+
+
+}
+
+.blocks {
+    width: 1268px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+
+}

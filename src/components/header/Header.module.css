@@ -1,0 +1,86 @@
+@import "../../styles/variables.css";
+
+
+.header {
+    display: flex;
+    align-items: center;
+    height: 93px;
+    background: var(--white);
+
+}
+
+.logo {
+    width: 141px;
+    height: 141px;
+    margin-left: 57px;
+    margin-top: 49px;
+}
+
+.nav ul {
+    display: flex;
+    margin-left: 358px;
+}
+
+.nav ul li {
+    list-style-type: none;
+}
+
+.nav ul li a {
+    margin-right: 50px;
+    text-decoration: none;
+    font-family: Inter, sans-serif;
+    font-weight: 550;
+    line-height: 17px;
+    color: var(--black);
+    font-size: 14px;
+    letter-spacing: 0.02em;
+
+}
+
+.registration {
+    display: flex;
+    justify-content: space-between;
+    width: 251px ;
+    margin-left: 239px;
+
+
+
+
+}
+.reg {
+    font-family: Inter, sans-serif;
+    font-weight: 400;
+    line-height: 17px;
+    opacity: 40%;
+    margin-top: 5px;
+
+
+}
+.reg a {
+    text-decoration: none;
+    line-height: 17px;
+    color: var(--black);
+    font-size: 14px;
+    letter-spacing: 0.06em;
+}
+.separator {
+    width: 2px;
+    height: 26px;
+    background: var(--green);
+    opacity: 60%;
+}
+
+
+.enter {
+    background: var(--aqva);
+    border-radius: 5px;
+    width: 65px;
+    height: 26px;
+    border: none;
+    font-family: Inter, sans-serif;
+    line-height: 17px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    cursor: pointer;
+}
+
