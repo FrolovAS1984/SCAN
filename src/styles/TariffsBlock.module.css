@@ -1,0 +1,17 @@
+@import "variables.css";
+
+.container {
+    width: 415px;
+    height: 540px;
+    border-radius: 10px;
+    border: 2px;
+    box-shadow: 0px 0px 20px 0px #00000033;
+}
+
+.head {
+    height: 132px;
+    background-color: var(--orange);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+}
