@@ -1,6 +1,8 @@
 @import "../../styles/variables.css";
 
 .footer {
+    /*margin-top: 115px;*/
+    margin-left: 30px;
     display: flex;
     align-items: center;
     height: 137px;
@@ -12,18 +14,17 @@
 .logo {
     width: 141px;
     height: 141px;
-    margin-left: 49px;
-    margin-top: 8px;
+    margin-left: 31px;
+    margin-top: 5px;
 }
 
 .info {
     text-align: right;
-    margin-right: 55px;
+    margin-right: 45px;
     color: var(--white);
     font-family: 'Inter', sans-serif;
     line-height: 2px;
     letter-spacing: 0.04em;
-    margin-top: 5px;
     margin-bottom: 15px;
 }
 

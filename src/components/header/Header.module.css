@@ -12,7 +12,7 @@
 .logo {
     width: 141px;
     height: 141px;
-    margin-left: 57px;
+    margin-left: 59px;
     margin-top: 49px;
 }
 
@@ -82,5 +82,9 @@
     font-weight: 600;
     letter-spacing: 0.02em;
     cursor: pointer;
+    transition: transform 0.2s;
 }
 
+.enter:active {
+    transform: scale(0.9);
+}

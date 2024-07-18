@@ -1,5 +1,6 @@
 import styles from "./Header.module.css";
 import LOGO from "/src/images/LOGO.svg";
+import {Link} from "react-router-dom";
 
 function Header() {
     return (
@@ -18,7 +19,9 @@ function Header() {
             <div className={styles.registration}>
                 <div className={styles.reg}><a href="#">Зарегистрироваться</a></div>
                 <div className={styles.separator}></div>
-                <button className={styles.enter}>Войти</button>
+                <Link to={"/auth"}>
+                    <button className={styles.enter}>Войти</button>
+                </ Link>
             </div>
 
 
