@@ -6,6 +6,7 @@ import FACEBOOK from "../../images/facebook.svg";
 import YANDEX from "../../images/yandex.svg";
 import {useContext , useState} from "react";
 import {Context} from "../../main.jsx";
+import $api from "../../http/http.js"
 
 
 function Auth() {
@@ -40,6 +41,14 @@ function Auth() {
         }
     };
 
+    const fetchData = async () => {
+        try {
+            const response = await $api.get('/info'); // укажите нужный эндпоинт
+            console.log(response.data);
+        } catch (error) {
+            console.error("Ошибка при отправке запроса:", error);
+        }
+    };
 
 
 
@@ -96,8 +105,12 @@ function Auth() {
 
                 </div>
             </div>
+            <button onClick={fetchData} >Отправить запрос о пользователе</button>
+            <button onClick={()=>store.logout()} >Выход</button>
+
 
         </section>
+
     )
 }
 
