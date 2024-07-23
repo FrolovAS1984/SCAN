@@ -1,5 +1,6 @@
 import {makeAutoObservable} from "mobx";
 import AuthService from "../services/AuthService.js";
+import axios from "axios";
 
 export default class Store {
     user = {};
@@ -43,5 +44,14 @@ export default class Store {
 
         }
     }
-
+//     async checkAuth() {
+//         try {
+//             const response = await  axios.get
+//             this.setAuth(true);
+//             this.setUser(response.data);
+//         } catch (e) {
+//             console.log(e.response?.data?.message)
+//         }
+//     }
+//
 }

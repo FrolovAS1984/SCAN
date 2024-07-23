@@ -6,7 +6,7 @@ import FACEBOOK from "../../images/facebook.svg";
 import YANDEX from "../../images/yandex.svg";
 import {useContext , useState} from "react";
 import {Context} from "../../main.jsx";
-import $api from "../../http/http.js"
+
 
 
 function Auth() {
@@ -15,6 +15,7 @@ function Auth() {
     const [password, setPassword] = useState('');
     const [isValid, setIsValid] = useState(true);
     const {store} = useContext(Context);
+
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -25,8 +26,8 @@ function Auth() {
                 // Шаблон для номера телефона
                 pattern = /^(\+7|8)[0-9]{10}$/;
             } else {
-                // Шаблон для любых символов
-                pattern = /^[a-zA-Z0-9]*$/;
+                // Шаблон для символов, цифр и нижнего подчеркивания
+                pattern = /^[a-zA-Z0-9_]*$/;
             }
 
             if (pattern.test(value)) {
@@ -41,14 +42,6 @@ function Auth() {
         }
     };
 
-    const fetchData = async () => {
-        try {
-            const response = await $api.get('/info'); // укажите нужный эндпоинт
-            console.log(response.data);
-        } catch (error) {
-            console.error("Ошибка при отправке запроса:", error);
-        }
-    };
 
 
 
@@ -88,7 +81,13 @@ function Auth() {
                     />
 
                 </div>
-                <button onClick={()=>store.login(loginOrPhone, password)} className={loginOrPhone && password ? styles.buttonActive : styles.button}>Войти</button>
+
+                    <button
+                        onClick={() => store.login(loginOrPhone, password)}
+                        className={loginOrPhone && password ? styles.buttonActive : styles.button}>
+                        Войти
+                    </button>
+
                 <div className={styles.recover}>Восстановить пароль</div>
                 <div className={styles.loginVia}>Войти через:</div>
                 <div className={styles.social}>
@@ -104,10 +103,8 @@ function Auth() {
 
 
                 </div>
-            </div>
-            <button onClick={fetchData} >Отправить запрос о пользователе</button>
-            <button onClick={()=>store.logout()} >Выход</button>
 
+            </div>
 
         </section>
 
