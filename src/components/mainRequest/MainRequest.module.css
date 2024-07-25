@@ -45,22 +45,26 @@
 
 }
 
-.button {
+.buttonRequest {
     margin-top: 70px;
+    margin-left: 60px;
     width: 335px;
     height: 59px;
-    margin-left: 60px;
     background: var(--blue);
     border: none;
     border-radius: 5px;
     font-size: 22px;
     font-weight: 500;
     line-height: 27px;
-    letter-spacing: 0.01em;
+    letter-spacing: 0.05em;
     text-align: center;
     font-family: Inter, sans-serif;
     color: var(--white);
     cursor: pointer;
+    transition: transform 0.2s;
+}
+.buttonRequest:active {
+    transform: scale(0.9);
 }
 
 .image {

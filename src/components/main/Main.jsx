@@ -4,6 +4,7 @@ import Banner from "../banner/Banner.jsx";
 import Tariffs from "../tariffs/Tariffs.jsx";
 
 
+
 function Main() {
     return (
         <main>

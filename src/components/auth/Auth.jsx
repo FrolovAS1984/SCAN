@@ -6,6 +6,7 @@ import FACEBOOK from "../../images/facebook.svg";
 import YANDEX from "../../images/yandex.svg";
 import {useContext , useState} from "react";
 import {Context} from "../../main.jsx";
+import {Link} from "react-router-dom";
 
 
 
@@ -46,6 +47,7 @@ function Auth() {
 
 
 
+
     return (
         <section className={styles.container}>
             <div className={styles.info}>
@@ -61,7 +63,7 @@ function Auth() {
                     <div className={styles.enter}>Войти</div>
                     <div className={styles.registration}>Зарегистрироваться</div>
                 </div>
-                <div className={styles.input}>
+                <form className={styles.input}>
                     <p className={styles.login}>Логин или номер телефона:</p>
                     <input
                         type="text"
@@ -69,6 +71,7 @@ function Auth() {
                         value={loginOrPhone}
                         onChange={handleChange}
                         className={isValid ? styles.validlogin : styles.invalidlogin}
+                        autoComplete={"username"}
                     />
                     {!isValid && <p className={styles.loginerror}>Введите корректные данные</p>}
                     <p className={styles.passwordtext}>Пароль:</p>
@@ -78,15 +81,20 @@ function Auth() {
                         value={password}
                         onChange={handleChange}
                         className={styles.password}
+                        autoComplete={"current-password"}
                     />
 
-                </div>
-
+                </form>
+                <Link to={"/"}>
                     <button
                         onClick={() => store.login(loginOrPhone, password)}
                         className={loginOrPhone && password ? styles.buttonActive : styles.button}>
                         Войти
                     </button>
+
+                </Link>
+
+
 
                 <div className={styles.recover}>Восстановить пароль</div>
                 <div className={styles.loginVia}>Войти через:</div>
