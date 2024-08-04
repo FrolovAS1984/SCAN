@@ -1,5 +1,7 @@
 import axios from "axios";
 
+
+export const AUTH_URL = "https://gateway.scan-interfax.ru/api/v1";
 export const API_URL = "https://gateway.scan-interfax.ru/api/v1/account";
 
 const $api = axios.create({

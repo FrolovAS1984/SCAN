@@ -40,3 +40,34 @@
 
 }
 
+@media (max-width: 1360px) {
+    .footer {
+        max-width: 375px;
+        margin: 0 auto;
+
+    }
+    .logo {
+        margin-left: 19px;
+        margin-bottom: 19px;
+    }
+    .logo img {
+        width: 111px;
+        height: 111px;
+
+    }
+
+    .info {
+    text-align: right;
+    margin-right: 20px;
+    color: var(--white);
+    font-family: 'Inter', sans-serif;
+    line-height: 2px;
+    letter-spacing: 0.04em;
+    margin-bottom: 10px;
+}
+
+
+
+
+}
+

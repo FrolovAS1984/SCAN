@@ -10,6 +10,7 @@ import { useContext } from "react";
 import { observer } from "mobx-react-lite";
 import { ClipLoader } from "react-spinners";
 import "./App.css";
+import Result from "./components/result/Result.jsx";
 
 function App() {
     const { store } = useContext(Context);
@@ -35,6 +36,8 @@ function App() {
                 <Route exact path="/" element={<Main />} />
                 <Route exact path="/auth" element={<Auth />} />
                 {store.isAuth && <Route exact path="/search" element={<Search />} />}
+                {store.isAuth && <Route exact path="/result" element={<Result />} />}
+
             </Routes>
             <Footer />
         </>
